@@ -1,0 +1,56 @@
+### populate database
+POST http://localhost:7070/api/trips/populate
+Content-Type: application/json
+
+### Get All Trips
+GET http://localhost:7070/api/trips
+Accept: application/json
+
+###
+
+### Get a Trip by ID
+GET http://localhost:7070/api/trip/1
+Accept: application/json
+
+###
+
+### Create a New Trip
+POST http://localhost:7070/api/trip
+Content-Type: application/json
+
+{
+  "start_date": "2022-10-01",
+  "end_date": "2022-10-05",
+  "longitude": 41.3879,
+  "latitude": 2.1699,
+  "name": "Barcelona",
+  "price": 90,
+  "id": 1,
+  "trip_category": "city"
+}
+
+###
+
+### Update a Trip by ID
+PUT http://localhost:7070/api/trip/1
+Content-Type: application/json
+
+{
+  "start_date": "2022-10-01",
+  "end_date": "2022-10-07",
+  "longitude": 41.3879,
+  "latitude": 2.1699,
+  "name": "Barcelona",
+  "price": 90,
+  "id": 1,
+  "trip_category": "city"
+}
+
+###
+
+### Delete a Trip by ID
+DELETE http://localhost:7070/api/trip/1
+
+###
+GET http://localhost:7070/api/trips?category=city
+Accept: application/json
